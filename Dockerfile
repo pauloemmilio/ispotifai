@@ -10,9 +10,7 @@ LABEL autor="Rebeca Dantas, Paulo Emílio, Lilían Lucena, Vinicius" \
       licenca="copyright"
 
 # Configurando JAR
-
-ARG JAR_FILE
-COPY src/${JAR_FILE} /src/ispotifai.jar
+COPY ispotifai.jar /src/ispotifai.jar
 
 #Iniciando o servico ao iniciar o conteiner
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/src/ispotifai.jar"]
