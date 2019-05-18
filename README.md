@@ -8,8 +8,8 @@ cd ispotifai
 
 ## Para compilar a imagem 
 cd ispotifai/ispotifai
-docker build -t ispotifai/ispotifai:0.0.1 .
+docker build -t rqdzs/ispotifai:0.0.1 .
 
 ##Inicie o conteiner
 Use o comando a seguir para iniciar um conteiner do ispotifai
-docker run -d -p 8080:8080 --name ispotifai ispotifai/ispotifai:0.0.1
+docker run -d -p 8080:8080 --name ispotifai rqdzs/ispotifai:0.0.1
