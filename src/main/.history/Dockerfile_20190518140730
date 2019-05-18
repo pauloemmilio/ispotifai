@@ -1,0 +1,24 @@
+#Imagem base
+FROM 
+
+#Informacoes sobre a imagem
+LABEL autor="Rebeca Dantas, Paulo Emílio, Lilían Lucena, Vinicius" \
+      email="rebeca.queiroz@dce.ufpb.br" \
+      data_criacao="18/05/2019" \
+      versao="1.0.0" \
+      descricao="Especifica a imagem Docker do Ispotifay" \
+      licenca="copyright"
+
+
+#Copiando arquivos e scripts para dentro da imagem
+ADD run.sh /run.sh
+
+#Definindo a permissao do scripts e arquivos
+RUN chmod 755 /run.sh \
+    && ldconfig
+
+#Expondo a porta do servico
+EXPOSE ${gateway_port}
+
+#Iniciando o servico ao iniciar o conteiner
+ENTRYPOINT ["/bin/bash", "-c", "/run.sh $APP_PROFILE"]
