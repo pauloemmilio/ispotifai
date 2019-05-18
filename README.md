@@ -8,7 +8,7 @@ cd ispotifai
 
 ## Para compilar a imagem 
 cd ispotifai/ispotifai
-docker build -t ispotifai/ispotifai:0.0.1
+docker build -t ispotifai/ispotifai:0.0.1 .
 
 ##Inicie o conteiner
 Use o comando a seguir para iniciar um conteiner do ispotifai
